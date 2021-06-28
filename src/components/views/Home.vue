@@ -3,7 +3,7 @@
         <h3>Mis paneles</h3>
         <div class="boards-collection">
             <input type="text"
-                   placeholder="Add new panel"
+                   placeholder="Agregar un nuevo panel"
                    v-model="boardName"
                    @keyup.enter="add()" 
             />
@@ -24,17 +24,22 @@
         data() {
             return {
                 boardName: '',
-                board: [
-                    {id: 1, name: 'Tareas'},
-                    {id: 2, name: 'Lista de la compra'},
+                boards: [
+                    {id: '1', name: 'Tareas'},
+                    {id: '2', name: 'Lista de la compra'},
                 ]
             }
         },
-
+        methods: {
+            add() {
+                this.boards.push({name: this.boardName})
+            }
+        },
     }
 </script>
 
 <style lang="scss">
+
     h3 {
         text-align: left;
         margin: 1.5rem;

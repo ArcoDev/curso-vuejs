@@ -17,6 +17,7 @@ export default {
 </script>
 
 <style scoped>
+
 #app {
   box-sizing: border-box;
   color: #37474f;
@@ -28,6 +29,6 @@ export default {
   padding: 0;
 }
 .container {
-  padding-bottom: 4rem;
+  height: 100vh;
 }
 </style>
